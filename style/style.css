@@ -1,0 +1,262 @@
+body{
+    font-family: 'Fira Sans', sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+}
+
+.localizador__tiendas-title{
+    font-size: 25px;
+    font-weight: 700;
+    text-align: left;
+    padding: 15px 0 15px 0;
+    border-bottom: 1px solid #000;
+    text-transform: uppercase;
+}
+
+.tiendas__filtro{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.select__estilo{
+    width: 100%;
+    height: 35px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    position: relative;
+    margin-bottom:15px;
+}
+
+.select__estilo:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 33px;
+    width: 35px;
+    border-left: 1px solid #e5e5e5;
+    background: #fff url(../img/Down.svg) no-repeat 50%;
+    background-size: 15px;
+}
+
+.select__estilo select{
+    width: 100%;
+    height: 35px;
+    border: 0;
+    background: transparent;
+    padding: 0 2.25rem 0 .625rem;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+.tiendas__filtro-label > label#labels{
+    display:block;
+    font-weight: 400;
+    font-size: .875rem;
+    line-height: 1;
+    color: #333;
+    text-align: left;
+}
+
+#map{
+    width: 100%;
+    min-height: 560px;
+    position: relative; 
+    top: 0; 
+    bottom: 0;
+}
+
+#global {
+	height: 486px;
+	width: 100%;
+	border: 1px solid #ddd;
+	background: #fff;
+	overflow-y: scroll;
+}
+
+/* Tamaño del scroll */
+#global::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+   /* Estilos barra (thumb) de scroll */
+#global::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+  
+#global::-webkit-scrollbar-thumb:active {
+    background-color: #999999;
+}
+  
+#global::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+  
+   /* Estilos track de scroll */
+#global::-webkit-scrollbar-track {
+b   ackground: #e1e1e1;
+    border-radius: 4px;
+}
+  
+#global::-webkit-scrollbar-track:hover, 
+#global::-webkit-scrollbar-track:active {
+    background: #d4d4d4;
+}
+
+@media only screen and (max-width: 40em) {
+    #map{
+        width: 100%;
+        min-height: 270px;
+        position: relative;
+        bottom:20px;
+    }
+
+    #global {
+        height: 210px;
+        width: 100%;
+        border: 1px solid #ddd;
+        background: #fff;
+        overflow-y: scroll;
+        margin-bottom: 20px;
+    }
+
+}
+
+.texto {
+	padding:20px;
+    background:#fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.texto:hover{
+    background:#f6f6f6;
+    transition: all .3s ease;
+}
+
+.tiendas__lista-titulo{
+    margin-bottom: 5px;
+    font-size: 17px;
+}
+
+.tiendas__descripcion{
+    font-size:12px;
+}
+
+.tiendas__descripcion-botton{
+    width: 100%;
+    padding: 8px;
+    border-style: none;
+    background-color: #000;
+    color:#fff;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-kerning: normal;
+    border-radius: 0;
+    transition: all .3s ease;
+    margin-top: 12px;
+}
+
+.tiendas__descripcion-botton:hover{
+    background-color: #d1d1d1;
+    color:#000;
+}
+
+.tiendas__descripcion-botton:active{
+    background-color: #fff;
+    color:#000;
+}
+
+.hidden {
+    display: none;
+}
+
+/*.pad2{
+    padding:20px;
+}*/
+
+/*.heading {
+    background:#fff;
+    border-bottom:1px solid #eee;
+    height:60px;
+    line-height:60px;
+    padding:0 10px;
+}*/
+
+.listings {
+    height:100%;
+    overflow:auto;
+}
+
+.listings .item {
+    display:block;
+    border-bottom:1px solid #eee;
+    padding:10px;
+    text-decoration:none;
+}
+
+.listings .item:last-child{ 
+    border-bottom: none; 
+}
+
+.listings .item .title {
+    display:block;
+    color:#000;
+    font-weight:700;
+}
+
+  /* Marker tweaks */
+.leaflet-popup-close-button {
+    display:none;
+}
+
+.leaflet-popup-content {
+    font: 400 15px/22px;
+    padding: 0;
+    width: 200px;
+}
+
+.leaflet-popup-content-wrapper {
+    padding:0;
+}
+
+.leaflet-popup-content h3 {
+    background:#000;
+    color:#fff;
+    margin:0;
+    display:block;
+    padding:10px;
+    border-radius:3px 3px 0 0;
+    font-weight:700;
+    margin-top:-15px;
+}
+
+.leaflet-popup-content div {
+    padding: 15px;
+}
+
+.leaflet-container .leaflet-marker-icon { 
+    cursor:pointer; 
+}
+
+.tiendas__descripcion{
+    font-size: 13px;
+    margin: 0;
+}

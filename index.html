@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestras tiendas</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,500;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+     <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+    <script src='https://api.mapbox.com/mapbox.js/v3.2.1/mapbox.js'></script>
+    <link href='https://api.mapbox.com/mapbox.js/v3.2.1/mapbox.css' rel='stylesheet' />
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+
+<div class="container p-3 localizador__tiendas">
+
+<h2 class="localizador__tiendas-title">Encuentra nuestras tiendas</h2><br>
+
+<div class="row mb-3">
+
+    <div class="col-lg-5 col-md-5 col-sm-12">
+        <div class="tiendas__filtro">
+            <div class="tiendas__filtro-container">
+                <label class="tiendas__filtro-label" for="ciudades" id="labels">Selecciona tienda</label>
+                <div class="select__estilo">
+                    <select class="event-type-select" id="tiendas" name="tiendas">
+                        <option value="0" selected disabled>Tiendas</option>
+                        <option value="todas">Todas las Tiendas</option>
+                        <option value="arica">Arica</option>
+                        <option value="iquique">Iquique</option>
+                        <option value="antofagasta">Antofagasta</option>
+                        <option value="la-serena">La Serena</option>
+                        <option value="coquimbo">Coquimbo</option>
+                        <option value="vina-del-mar">Viña del Mar</option>
+                        <option value="barrio-independencia">Mall Independencia</option>
+                        <option value="dominicos">Mall Plaza Los Dominicos</option>
+                        <option value="la-dehesa">Portal La Dehesa</option>
+                        <option value="alto-las-condes">Alto Las Condes</option>
+                        <option value="parque-arauco">Parque Arauco</option>
+                        <option value="costanera-center">Costanera Center</option>
+                        <option value="florida-center">Florida Center</option>
+                        <option value="plaza-vespucio">Mall Plaza Vespucio</option>
+                        <option value="imperio">Mall Vivo Imperio</option>
+                        <option value="plaza-oeste">Mall Plaza Oeste</option>
+                        <option value="plaza-norte">Mall Plaza Norte</option>
+                        <option value="plaza-alameda">Mall Plaza Alameda</option>
+                        <option value="buenaventura">Outlet Buenaventura</option>
+                        <option value="concepcion">Concepción</option>
+                        <option value="temuco">Temuco</option>
+                    </select>
+                </div>
+            </div>
+            <div id="global">
+                <div class="tiendas__lista" id="tiendas__lista">
+                  <div id='listings' class='listings'>
+                     <!-- <button class="tiendas__descripcion-botton">Ver ubicación</button>-->
+                </div>
+                </div>
+              </div>
+        </div>
+</div>
+
+<div class="col-lg-7 col-md-7 col-sm-12">
+        <div id="map" class="map"></div>
+</div>
+
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script src="./js/script.js"></script>
+
+</body>
+</html>
